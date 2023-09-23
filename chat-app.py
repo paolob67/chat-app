@@ -2,7 +2,7 @@ import streamlit as st
 from ibm_watson_machine_learning.foundation_models import Model
 
 st.title('Watsonx Chatbot 🤖')
-st.caption("🚀 A chatbot powered by watsonx.ai - rel 3")
+st.caption("🚀 A chatbot powered by watsonx.ai - rel 4")
 
 with st.sidebar:
     watsonx_api_key = st.text_input("Watsonx API Key", key="watsonx_api_key", type="password")
@@ -15,7 +15,7 @@ if not watsonx_api_key:
 else :
     st.info("setting up to use: " + watsonx_model)
     my_credentials = { 
-        "url"    : "https://us-south.ml.cloud.ibm.com", 
+        "url"    : watsonx_url, 
         "apikey" : watsonx_api_key
     }      
     gen_parms   = None
