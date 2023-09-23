@@ -17,11 +17,12 @@ else :
     my_credentials = { 
         "url"    : watsonx_url, 
         "apikey" : watsonx_api_key
-    }      
+    }
+    params = json.loads(watsonx_model_params)      
     project_id  = "f1400972-361e-4b98-bf4b-b56e5cf776aa"
     space_id    = None
     verify      = False
-    model = Model( watsonx_model, my_credentials, watsonx_model_params, project_id, space_id, verify )   
+    model = Model( watsonx_model, my_credentials, params, project_id, space_id, verify )   
     if model :
         st.info("done")
  
