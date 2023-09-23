@@ -18,12 +18,11 @@ else :
         "url"    : "https://us-south.ml.cloud.ibm.com", 
         "apikey" : watsonx_api_key
     }      
-    model_id    = ModelTypes.FLAN_T5_XXL
     gen_parms   = None
     project_id  = "f1400972-361e-4b98-bf4b-b56e5cf776aa"
     space_id    = None
     verify      = False
-    model = Model( model_id, my_credentials, gen_parms, project_id, space_id, verify )   
+    model = Model( watsonx_model, my_credentials, gen_parms, project_id, space_id, verify )   
     if model :
         st.info("done")
  
