@@ -5,6 +5,7 @@ import os
 
 st.title('Watsonx Chatbot 🤖')
 st.caption("🚀 A chatbot powered by watsonx.ai - rel 12")
+st.info(os.environ)
 
 with st.sidebar:
     watsonx_api_key = st.text_input("Watsonx API Key", key="watsonx_api_key", value=os.environ.get("API_KEY"), type="password")
