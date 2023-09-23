@@ -1,8 +1,9 @@
 import streamlit as st
 from ibm_watson_machine_learning.foundation_models import Model
+import json
 
 st.title('Watsonx Chatbot 🤖')
-st.caption("🚀 A chatbot powered by watsonx.ai - rel 9")
+st.caption("🚀 A chatbot powered by watsonx.ai - rel 10")
 
 with st.sidebar:
     watsonx_api_key = st.text_input("Watsonx API Key", key="watsonx_api_key", type="password")
