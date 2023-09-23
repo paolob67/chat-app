@@ -1,12 +1,16 @@
 import streamlit as st
 
 st.title('Watsonx Chatbot 🤖')
+st.caption("🚀 A chatbot powered by watsonx.ai")
 
 with st.sidebar:
     watsonx_api_key = st.text_input("Watsonx API Key", key="watsonx_api_key", type="password")
     watsonx_url = st.text_input("Watsonx URL", key="watsonx_url", value="https://us-south.ml.cloud.ibm.com", type="default")   
     #TODO: change this to a select box with more than one model
     watsonx_model = st.text_input("Model", key="watsonx_model", value="meta-llama/llama-2-70b-chat", type="default")   
+
+if not watsonx_api_key:
+    st.info("Please add your watsonx API key to continue.")
 
 if 'messages' not in st.session_state: 
     st.session_state.messages = [{"role": "assistant", "content": "How can I help you?"}] 
