@@ -7,8 +7,8 @@ WORKDIR /app
 COPY requirements.txt ./
 COPY *.py ./
 
-RUN apt-get update && apt-get install -y \
-    build-essential \
+# removed build-essential 
+RUN apt-get update && apt-get install -y \    
     curl \
     software-properties-common \
     git \
